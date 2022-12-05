@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+body{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: hsl(185, 75%, 39%);
+    font-family: 'Kumbh Sans', sans-serif; 
+}
+
+img.bg-top {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+img.bg-bottom {
+    position: absolute;
+    transform: translate(60%, 50%);
+}
+
+.card {
+    position: relative;
+    background: white;
+    width: 30%;
+    height: fit-content;
+    border-radius: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.card .card__top {
+    background: url("/First-Html-page/bonus/images/bg-pattern-card.svg");
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+.card .card__top img {
+    border-radius: 100%;
+    border: 5px solid white;
+    transform: translateY(50%);
+}
+
+.card .card__bottom {
+    padding: 4rem 0rem 0rem 0rem;
+}
+
+.card .card__bottom .profile {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.card .card__bottom .profile .profile__name {
+    font-weight: 700;
+    color: hsl(229, 23%, 23%);
+}
+
+.card .card__bottom .profile .profile__age {
+    color: hsl(0, 0%, 59%);
+    margin-left: .25rem;
+}
+
+.card .card__bottom .profile .profile__location {
+    color: hsl(0, 0%, 59%);
+    font-size: 14px;
+    display: block;
+    margin-top: .5rem;
+}
+
+.card .card__bottom .stats {
+    border-top: 1px solid hsl(0, 0%, 59%);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 2rem;
+    
+}
+
+.card .card__bottom .stats .stat__item {
+    text-align: center;
+}
+.card .card__bottom .stats .stat__item .number {
+    font-weight: 700;
+}
+.card .card__bottom .stats .stat__item .text {
+    font-size: 12px;
+    color: hsl(0, 0%, 59%);
+    margin-top: .25rem;
+}
+
+@media screen and (max-width: 375px) {
+    img.bg-top {
+        width: 400px;
+        height: 400px;
+    }
+    img.bg-bottom {
+        width: 600px;
+        top: 100%;
+        transform: translateY(-50%) translateX(20%);
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .attribution {
+        font-size: 12px;
+    }
+    .attribution a{
+        font-size: 12px;
+    }
+}

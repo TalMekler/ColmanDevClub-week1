@@ -1,0 +1,180 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Merriweather";
+}
+
+.main {
+  font-family: "Merriweather";
+  color: #40514e;
+}
+h1 {
+  font-family: "Sacramento";
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat";
+}
+
+h1,
+h2 {
+  color: #66bfbf;
+}
+h3 {
+  color: #11999e;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+
+/* Top Section */
+.top-section {
+  position: relative;
+  margin: 0;
+  text-align: center;
+  background: #e4f9f5;
+  padding-top: 150px;
+}
+.top-section h1 {
+  font-size: 3.25rem;
+}
+
+.top-section .top-cloud {
+  position: absolute;
+  right: 300px;
+  top: 40px;
+}
+
+.top-section .bottom-cloud {
+  position: absolute;
+  left: 250px;
+  bottom: 300px;
+}
+
+.hello-section {
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.hello-section img {
+  width: 100px;
+  height: 100px;
+}
+
+hr {
+  border: 5px dotted #eaf6f6;
+  border-bottom: 0;
+  width: 75px;
+}
+
+.skills-section {
+  text-align: center;
+  padding: 5rem 10rem;
+}
+
+/* Skills Section */
+.skills {
+  margin-top: 5rem;
+}
+
+.skills-section .skill {
+  display: flex;
+}
+
+.skills-section .skill.mb {
+  margin-bottom: 4rem;
+}
+
+.skills-section .skill img {
+  width: 220px;
+  height: 120px;
+}
+.skills-section .skill img.bigger-img {
+  width: 220px;
+  height: 160px;
+}
+
+.skills-section .skill .skill__text {
+  text-align: start;
+}
+
+.skills-section .skill .skill__text.mr {
+  margin-right: 2rem;
+}
+.skills-section .skill .skill__text.ml {
+  margin-left: 2rem;
+}
+
+.skills-section .skill .skill__text h3 {
+  margin-top: 0;
+}
+.skills-section .skill .skill__text p {
+  line-height: 2;
+}
+
+.get-in-touch-section {
+  padding: 5rem 14rem;
+  text-align: center;
+}
+
+.get-in-touch-section h2 {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.get-in-touch-section p {
+  line-height: 2;
+}
+
+button {
+  color: white;
+  background: #11cdd4;
+  padding: 0.75rem 1.5rem;
+  border: 0;
+  border-radius: 10px;
+  font-weight: 100;
+  font-size: 18px;
+  letter-spacing: 1.25px;
+  margin-top: 3rem;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+button:hover {
+  background: #30e3cb;
+}
+
+/* Footer Section */
+.footer {
+  background: #66bfbf;
+  color: #eaf6f6;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.footer .social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.footer .social .social-item {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  color: #11999e;
+}
+
+.footer .social .social-item:not(:last-child) {
+  margin-right: 1.25rem;
+}
+
+.footer .copyright {
+  font-size: 0.75rem;
+}
