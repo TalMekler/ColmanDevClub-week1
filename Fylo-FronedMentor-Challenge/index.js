@@ -15,7 +15,7 @@ var progressBarCircle = document.getElementById("progress-bar-circle");
 var fileName;
 var validFile;
 var fileSize;
-window.localStorage.setItem("usedSize", 0);
+// window.localStorage.setItem("usedSize", 0);
 updateSizes();
 uploadBtn.addEventListener("change", () => {
   fileName = uploadBtn.value;
