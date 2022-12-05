@@ -15,7 +15,7 @@ var progressBarCircle = document.getElementById("progress-bar-circle");
 var fileName;
 var validFile;
 var fileSize;
-// window.localStorage.setItem("usedSize", 0);
+window.localStorage.setItem("usedSize", 0);
 updateSizes();
 uploadBtn.addEventListener("change", () => {
   fileName = uploadBtn.value;
@@ -25,7 +25,7 @@ uploadBtn.addEventListener("change", () => {
     alert("Invalid file type!");
   } else {
     fileSize = uploadBtn.files[0];
-    fileSize = parseInt(fileSize.size / 1000 / 1000);
+    fileSize = parseFloat(parseFloat(fileSize.size / 1000 / 1000).toFixed(2));
     usedSize += fileSize;
     if (usedSize > totalSize) {
       alert("Not enough size!");
