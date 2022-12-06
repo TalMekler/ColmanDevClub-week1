@@ -88,7 +88,7 @@ img.bg-img.mobile-img {
   position: relative;
   color: white;
   width: 100%;
-  height: 60%;
+  height: 65%;
   padding: 1.5rem 2rem;
   margin-top: auto;
   display: flex;
@@ -102,17 +102,21 @@ img.bg-img.mobile-img {
 
 .right-box #uploaded-files-wrapper {
   display: flex;
-  overflow-x: auto;
-  flex-wrap: wrap;
-  /* background-color: hsl(229, 45%, 21%); */
-  margin-bottom: 0.5rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  margin-bottom: 1rem;
+}
+.right-box #uploaded-files-wrapper::-webkit-scrollbar {
+  height: 0;
 }
 .right-box #uploaded-files-wrapper .uploaded-file__item {
   background-color: hsl(229, 59%, 52%);
-  margin-bottom: 1rem;
+  
   padding: 0.2rem 0.6rem;
   border-radius: 1rem;
   margin-right: .5rem;
+  min-width: fit-content;
 }
 
 .right-box #uploaded-files-wrapper .uploaded-file__item p {

@@ -41,9 +41,9 @@ uploadBtn.addEventListener("change", () => {
 });
 
 function updateSizes() {
-  usedSize = JSON.parse(window.localStorage.getItem("usedSize"));
-  usedSizeElement.innerText = usedSize;
-  remainSizeElement.innerHTML = totalSize - usedSize;
+  usedSize = parseFloat(JSON.parse(window.localStorage.getItem("usedSize")).toFixed(2));
+  usedSizeElement.innerText = usedSize.toFixed(2);
+  remainSizeElement.innerHTML = (totalSize - usedSize).toFixed(2);
   maxSizeElement.innerText = totalSize;
   progressBarClr.style.width = (usedSize / totalSize) * 100 + "%";
 
@@ -68,3 +68,8 @@ function removeItem(item){
   updateSizes();
   uploadedFilesWrapper.removeChild(fileItemDiv);
 }
+
+uploadedFilesWrapper.addEventListener("wheel", (evt) => {
+  evt.preventDefault();
+  uploadedFilesWrapper.scrollLeft += evt.deltaY;
+});
