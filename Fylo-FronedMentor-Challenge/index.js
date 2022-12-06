@@ -38,6 +38,7 @@ uploadBtn.addEventListener("change", () => {
         '<div class="uploaded-file__item" file-size="'+fileSize+'"><p class="uploaded-file__item-text"><span>'+ fileName +'</span><i class="fa-solid fa-xmark" onclick="removeItem(this)"></i></p></div>';
     }
   }
+  uploadBtn.value = "";
 });
 
 function updateSizes() {
