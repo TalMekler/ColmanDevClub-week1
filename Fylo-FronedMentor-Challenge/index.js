@@ -19,7 +19,8 @@ var fileSize;
 // window.localStorage.setItem("usedSize", 0);
 updateSizes();
 uploadBtn.addEventListener("change", () => {
-  fileName = uploadBtn.value;
+  fileName = uploadBtn.value.split("\\");
+  fileName = fileName[fileName.length - 1];
   validFile = /\.(gif|jpe?g|tiff?|png|webp|bmp)$/i.test(fileName);
   console.log(validFile);
   if (!validFile) {
