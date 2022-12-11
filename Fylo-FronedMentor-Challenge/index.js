@@ -6,9 +6,14 @@ for (var i = 0; i < sizeUnitElements.length; i++) {
 }
 const totalSize = 100;
 
-let usedSize = parseFloat(Number(window.localStorage.getItem("usedSize")).toFixed(2));
+let usedSize;
+try {
+  usedSize = parseFloat(Number(window.localStorage.getItem("usedSize")).toFixed(2));
+} catch (error) {
+  usedSize = 0;
+  window.localStorage.setItem("usedSize", 0);
+}
 
-// window.localStorage.setItem("usedSize", 0);
 
 function onFileInputChange(event) {
   let fileName = event.value.split("\\");
@@ -18,11 +23,9 @@ function onFileInputChange(event) {
   if (!isImgFile) {
     alert("Invalid file type!");
   } else {
-    // let fileSize = event.files[0];
     let fileSize = parseFloat(parseFloat(event.files[0].size / 1024 / 1024).toFixed(2));
     if (usedSize + fileSize > totalSize) {
       alert("Not enough size!");
-      // usedSize -= fileSize;
     } else {
       usedSize += fileSize;
       window.localStorage.setItem("usedSize", usedSize);
